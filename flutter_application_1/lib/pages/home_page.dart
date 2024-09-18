@@ -52,7 +52,11 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (BuildContext context, int index) {
                   final quote = allData[index];
 
-              return Card(child: ListTile(title: Text(quote.quote),),);
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, 'detail_page' , arguments: quote);
+                }
+                ,child: Card(child: ListTile(title: Text(quote.quote),),));
 
                
             },

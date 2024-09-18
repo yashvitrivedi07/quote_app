@@ -275,3 +275,5 @@ List<Map<String, dynamic>> quotes = [
   ];
 
 List<QuoteModel> allData = quotes.map((e) => QuoteModel.fromMap(data: e)).toList();
+List<String> quote_category = quotes.map((e) => e['category'].toString()).toSet().toList();
+
